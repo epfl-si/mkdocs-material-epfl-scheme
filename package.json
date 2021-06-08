@@ -10,9 +10,12 @@
     "node": ">=10.13.0"
   },
   "scripts": {
+    "build": "npm t && npm run css",
+    "css": "cleancss --format 'breaks:afterComment=on' src/epfl-scheme.css -o dist/epfl-scheme.min.css",
     "test": "stylelint src/*.css"
   },
   "devDependencies": {
+    "clean-css-cli": "^5.3.0",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^22.0.0"
   }
