@@ -1,0 +1,12 @@
+{
+  "name": "mkdocs-material-epfl-scheme",
+  "version": "0.0.1",
+  "description": "",
+  "keywords": [],
+  "author": "William Belle <william.belle@gmail.com>",
+  "license": "MIT",
+  "repository": "epfl-si/mkdocs-material-epfl-scheme",
+  "scripts": {},
+  "devDependencies": {},
+  "dependencies": {}
+}
