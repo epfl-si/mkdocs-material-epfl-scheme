@@ -10,8 +10,10 @@
     "node": ">=10.13.0"
   },
   "scripts": {
-    "build": "npm t && npm run css && npm run replace",
+    "build": "npm run mkdir && npm t && npm run css && npm run replace && npm run copy",
+    "copy": "cp dist/epfl-scheme.min.css test/css/",
     "css": "cleancss --format 'breaks:afterComment=on' src/epfl-scheme.css -o dist/epfl-scheme.min.css",
+    "mkdir": "mkdir -p test/css",
     "replace": "replace '@VERSION' $npm_package_version dist/*.css",
     "test": "stylelint src/*.css",
     "watch:css": "onchange 'src/*.css' -- npm run build",
