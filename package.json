@@ -11,12 +11,12 @@
   },
   "scripts": {
     "build": "npm run mkdir && npm t && npm run css && npm run replace && npm run copy",
-    "copy": "cp dist/epfl-scheme.min.css test/css/",
+    "copy": "cp dist/epfl-scheme.min.css example/css/",
     "css": "cleancss --format 'breaks:afterComment=on' src/epfl-scheme.css -o dist/epfl-scheme.min.css",
-    "mkdir": "mkdir -p test/css",
+    "mkdir": "mkdir -p example/css",
     "replace": "replace '@VERSION' $npm_package_version dist/*.css",
     "test": "stylelint src/*.css",
-    "watch:css": "onchange 'src/*.css' -- npm run build",
+    "watch:css": "onchange 'src/*.css' 'example/*.md' -- npm run build",
     "watch:test": "mkdocs serve --dev-addr=0.0.0.0:8000",
     "watch": "run-p watch:css watch:test"
   },
