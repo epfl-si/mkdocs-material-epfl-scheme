@@ -9,6 +9,9 @@
   "engines": {
     "node": ">=10.13.0"
   },
+  "files": [
+    "dist/epfl-scheme.min.css"
+  ],
   "scripts": {
     "build": "npm run mkdir && npm t && npm run css && npm run replace && npm run copy",
     "copy": "cp dist/epfl-scheme.min.css example/css/",
